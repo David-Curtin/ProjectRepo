@@ -2,7 +2,8 @@
 import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Secondpage from './pages/Secondpage';
+import Favourites from './pages/Favourites'
+import Search from './pages/Search';
 
 //styles
 
@@ -16,8 +17,11 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/Secondpage">
-        <Secondpage />
+      <Route path="/Favourites">
+        <Favourites />
+      </Route>
+      <Route path="/Search">
+        <Search />
       </Route>
       </BrowserRouter>
     </div>
