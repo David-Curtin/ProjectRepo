@@ -2,18 +2,16 @@
 import { Link } from "react-router-dom"
 
 //styles
+import './Navbar.css'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="navbar">
         <nav>
-        <Link to="/">
+        <Link to="/" className="home">
             <h1>Home</h1>
         </Link>
-        <Link to="/Secondpage">
-            <h1>Second page</h1>
-        </Link>
-        <Link to="/Favourites">
+        <Link to="/Favourites" className="fav">
             <h1>Favourites</h1>
         </Link>
         <Link to="/Search">
