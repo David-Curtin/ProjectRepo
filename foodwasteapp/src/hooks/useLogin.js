@@ -2,21 +2,21 @@ import { useEffect, useState } from 'react'
 import { projectAuth } from "../firebase/config"
 import { useAuthContext } from "./useAuthContext"
 
-export const useLogout = () => {
+export const useLogin = () => {
     const [ error , setError ] = useState(null)
     const [ isPending , setIsPending ] = useState(false)
     const { dispatch } = useAuthContext()
     const [isCancelled, setIsCancelled] = useState(false)
 
-    const logout = async () => {
+    const login = async (email, password) => {
         setError(null)
         setIsPending(true)
 
         try{
-            await projectAuth.signOut()
+            const res = await projectAuth.signInWithEmailAndPassword(email, password)
 
-            // dispatches logout action
-            dispatch({ type: 'LOGOUT' })
+            // dispatches login action
+            dispatch({ type: 'LOGIN', payload: res.user})
 
             if(!isCancelled) {
             setIsPending(false)
@@ -37,5 +37,5 @@ export const useLogout = () => {
         return () => setIsCancelled(true)
     }, [])
 
-    return { logout, error, isPending}
+    return { login, error, isPending}
 }

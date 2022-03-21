@@ -15,7 +15,7 @@ export default function Navbar() {
         <Link to="/Favourites" className="home"><h1>Favourites</h1></Link>
         <Link to="/Search" className="home"><h1>Search</h1></Link>
         <Link to="/Login" className="login"><h1>Login</h1></Link>
-        <button className="button" onClick={logout}>Logout</button>
+        <button className="btn" onClick={logout}>Logout</button>
         <Link to="/SignUp"> <h1>Sign Up</h1></Link>
         </nav>
     </div>
