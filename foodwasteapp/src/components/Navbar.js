@@ -23,10 +23,10 @@ export default function Navbar() {
 
             {user && (
               <>
-                <li><Link to="/" className="home"><h1>Home</h1></Link></li>
-                <li><Link to="/Favourites" className="home"><h1>Favourites</h1></Link></li>
-                <li><Link to="/Search" className="home"><h1>Search</h1></Link></li>
-                <button className="btn" onClick={logout}>Logout</button>
+                <li><Link to="/" className={styles.title}><h1>Home</h1></Link></li>
+                <li><Link to="/Favourites" className={styles.title}><h1>Favourites</h1></Link></li>
+                <li><Link to="/Search" className={styles.title}><h1>Search</h1></Link></li>
+                <li><button className={styles.button} onClick={logout}>Logout</button></li>
               </>
             )}
           </ul>
