@@ -1,21 +1,30 @@
 // imports
-import { BrowserRouter, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Favourites from './pages/Favourites'
-import Search from './pages/Search';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
+import { useAuthContext} from './hooks/useAuthContext'
 
-//styles
+// components and pages
+import Navbar from './components/Navbar'
+import Home from './pages/Home/Home'
+import Favourites from './pages/Favourites/Favourites'
+import Login from './pages/Login/Login'
+import SignUp from './pages/SignUp/SignUp'
+import Search from './pages/Search/Search';
+
+// styles
 
 import './App.css';
 
 function App() {
+  const { authIsReady, user } = useAuthContext()
+
   return (
     <div className="App">
+      {authIsReady && (
       <BrowserRouter>
       <Navbar />
       <Route exact path="/">
-        <Home />
+        {!user && <Redirect to="/login"/>}
+        {user && <Home />}
       </Route>
       <Route path="/Favourites">
         <Favourites />
@@ -23,7 +32,16 @@ function App() {
       <Route path="/Search">
         <Search />
       </Route>
+      <Route path="/Login">
+        {user && <Redirect to="/"/>}
+        {!user && <Login />}
+      </Route>
+      <Route path="/SignUp">
+      {user && <Redirect to="/"/>}
+        {!user && <SignUp />}
+      </Route>
       </BrowserRouter>
+      )}
     </div>
   );
 }
