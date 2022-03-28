@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react"
-import { projectAuth } from "../firebase/config"
+import { auth } from "../firebase/config"
 import { useAuthContext } from "./useAuthContext"
 
 export const useSignup = () => {
@@ -13,7 +13,7 @@ export const useSignup = () => {
         setIsPending(true)
 
         try{
-            const res = await projectAuth.createUserWithEmailAndPassword(email, password)
+            const res = await auth.createUserWithEmailAndPassword(email, password)
 
             if (!res) {
                 throw new Error('Could not sign up')

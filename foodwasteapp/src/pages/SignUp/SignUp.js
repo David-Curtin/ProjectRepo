@@ -15,6 +15,7 @@ export default function Login() {
     signup(email, password, displayName)
   }
     return (
+      <body>
       <form onSubmit={handleSubmit} className={styles['signup-form']}>
           <h2>Sign Up</h2>
           <label className="">
@@ -48,5 +49,6 @@ export default function Login() {
           {isPending && <button className="btn" disabled>Loading</button>}
           { error && <p>{error}</p>}
       </form>
+      </body>
     )
   }
