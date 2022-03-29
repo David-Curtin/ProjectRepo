@@ -9,8 +9,14 @@ export default function Search() {
   const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-      console.log('effect used')
+      getRecipes()
     }, [])
+
+    const getRecipes = async () => {
+      const res = await fetch(exampleTestedRequest)
+      const data = await res.json();
+      console.log(data)
+    }
 
     return (
 
