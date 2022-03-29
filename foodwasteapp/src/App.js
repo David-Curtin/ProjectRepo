@@ -27,10 +27,12 @@ function App() {
         {user && <Home />}
       </Route>
       <Route path="/Favourites">
-        <Favourites />
+        {user && <Favourites />}
+        {!user && <Login />}
       </Route>
       <Route path="/Search">
-        <Search />
+        {user && <Search />}
+        {!user && <Login />}
       </Route>
       <Route path="/Login">
         {user && <Redirect to="/"/>}
