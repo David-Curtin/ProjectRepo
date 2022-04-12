@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Button } from "bootstrap"
 import Recipe from "../../components/Recipe"
 import './Search.css'
 
@@ -43,9 +42,17 @@ export default function Search() {
 
       <div>
           <form onSubmit={getSearch} className="search-form">
-            <input onChange={changeIngredients} className="search-bar" value={search} type="text"/>
-            <input onChange={changeIntolerances} className="search-bar" value={intolerance} type="text"/>
-            <button class="btn btn-primary" type="submit">Search</button>
+            <label>
+            <span>Enter Ingredients (comma seperated)</span>
+              <input onChange={changeIngredients} className="search-bar1" value={search} type="text"/>
+              </label>
+            <label>
+            <span>Enter Intolerances (comma seperated)</span>
+              <input onChange={changeIntolerances} className="search-bar2" value={intolerance} type="text"/>
+              </label>
+              <div>
+              <button className="btn">Search</button>
+              </div>
           </form>
           <div className="recipes">
           {recipes.map(recipe => (
