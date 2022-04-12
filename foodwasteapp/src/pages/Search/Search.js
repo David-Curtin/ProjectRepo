@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "bootstrap"
 import Recipe from "../../components/Recipe"
+import './Search.css'
 
 export default function Search() {
 
@@ -46,13 +47,14 @@ export default function Search() {
             <input onChange={changeIntolerances} className="search-bar" value={intolerance} type="text"/>
             <button class="btn btn-primary" type="submit">Search</button>
           </form>
+          <div className="recipes">
           {recipes.map(recipe => (
             <Recipe 
             key={recipe.id}
             title={recipe.title}
             image={recipe.image}
             />
-          ))}
+          ))} </div>
       </div>
     )
   }
