@@ -9,6 +9,7 @@ export default function Search() {
 
   const [recipes, setrecipes] = useState([])
   const [search, setSearch] = useState('')
+  const [intolerance, setIntolerance] = useState('')
   const [query, setQuery] = useState('')
 
     useEffect(() => {
@@ -21,21 +22,28 @@ export default function Search() {
       setrecipes(data.results)
     }
 
-    const changeSearch = e => {
+    const changeIngredients = e => {
       setSearch(e.target.value)
+    }
+
+    const changeIntolerances = e => {
+      setIntolerance(e.target.value)
     }
 
     const getSearch = e => {
       e.preventDefault()
-      setQuery(search)
+      setQuery(search + '&intolerances=' + intolerance)
       setSearch('')
+      setIntolerance('')
+      console.log(query)
     }
 
     return (
 
       <div>
           <form onSubmit={getSearch} className="search-form">
-            <input onChange={changeSearch} className="search-bar" value={search} type="text"/>
+            <input onChange={changeIngredients} className="search-bar" value={search} type="text"/>
+            <input onChange={changeIntolerances} className="search-bar" value={intolerance} type="text"/>
             <button class="btn btn-primary" type="submit">Search</button>
           </form>
           {recipes.map(recipe => (
