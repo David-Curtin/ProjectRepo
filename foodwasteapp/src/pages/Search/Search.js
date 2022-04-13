@@ -42,17 +42,14 @@ export default function Search() {
 
       <div>
           <form onSubmit={getSearch} className="search-form">
-            <label>
-            <span>Enter Ingredients (comma seperated)</span>
-              <input onChange={changeIngredients} className="search-bar1" value={search} type="text"/>
-              </label>
-            <label>
-            <span>Enter Intolerances (comma seperated)</span>
-              <input onChange={changeIntolerances} className="search-bar2" value={intolerance} type="text"/>
-              </label>
-              <div>
+            <p>Enter Ingredients (multiple selections must be comma seperated)</p>
+            <input onChange={changeIngredients} className="search-bar1" value={search} type="text"/>
+            <p></p>
+            <p>Enter Intolerances (multiple selections must be comma seperated)</p>
+            <input onChange={changeIntolerances} className="search-bar2" value={intolerance} type="text"/>
+            <div>
               <button className="btn">Search</button>
-              </div>
+            </div>
           </form>
           <div className="recipes">
           {recipes.map(recipe => (
