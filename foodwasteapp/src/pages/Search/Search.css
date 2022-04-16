@@ -12,6 +12,8 @@
     max-width: 360px;
     margin: 60px auto;
     padding: 20px;
+    box-sizing: border-box;
+    background-color:rgb(143, 255, 255);
 
 }
 .search-bar1 {

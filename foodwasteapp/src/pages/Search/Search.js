@@ -17,7 +17,7 @@ export default function Search() {
     }, [query])
 
     const getRecipes = async () => {
-      const res = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=6375070d85b04e8eae28ab8097147047&instructionsRequired=true.`)
+      const res = await fetch(`${baseUrl}complexSearch?query=${query}&${apiKey}&instructionsRequired=true.`)
       const data = await res.json();
       setrecipes(data.results)
     }
@@ -54,7 +54,7 @@ export default function Search() {
           <div className="recipes">
           {recipes.map(recipe => (
             <Recipe 
-            key={recipe.id}
+            myKey={recipe.id}
             title={recipe.title}
             image={recipe.image}
             />

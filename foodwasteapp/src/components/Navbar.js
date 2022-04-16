@@ -16,7 +16,7 @@ export default function Navbarre() {
           <Nav className="me-auto">
           {!user && (    
             <>
-              <Nav.Link href="/Login">Login</Nav.Link>
+              <Nav.Link  href="/Login">Login</Nav.Link>
               <Nav.Link href="/Signup">Sign Up</Nav.Link>
             </>
           )}
