@@ -18,7 +18,6 @@ export default function Recipe({title, image, myKey}) {
     }
 
     const addToFavourite = (e) => {
-        console.log(title, image, myKey)
         addDocument({
             title,
             image,
