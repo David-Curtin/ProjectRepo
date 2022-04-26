@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Recipe from "../../components/Recipe"
 import './Search.css'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 export default function Search() {
 
@@ -11,13 +12,15 @@ export default function Search() {
   const [search, setSearch] = useState('')
   const [intolerance, setIntolerance] = useState('')
   const [query, setQuery] = useState('')
+  const { user } = useAuthContext()
+  
 
     useEffect(() => {
       getRecipes()
     }, [query])
 
     const getRecipes = async () => {
-      const res = await fetch(`${baseUrl}complexSearch?query=${query}&${apiKey}&instructionsRequired=true.`)
+      const res = await fetch(`${baseUrl}complexSearch?query=${query}&${apiKey}`)
       const data = await res.json();
       setrecipes(data.results)
     }
@@ -54,6 +57,7 @@ export default function Search() {
           <div className="recipes">
           {recipes.map(recipe => (
             <Recipe 
+            uid={user.uid}
             myKey={recipe.id}
             title={recipe.title}
             image={recipe.image}
