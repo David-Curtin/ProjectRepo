@@ -27,7 +27,6 @@ export default function Navbarre() {
               <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item href="Search">Search</NavDropdown.Item>
               <NavDropdown.Item href="Favourites">Favourites</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
         </NavDropdown>

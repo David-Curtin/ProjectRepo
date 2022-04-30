@@ -38,7 +38,6 @@ export default function Search() {
       setQuery(search + '&intolerances=' + intolerance)
       setSearch('')
       setIntolerance('')
-      console.log(query)
     }
 
     return (
