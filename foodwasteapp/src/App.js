@@ -23,8 +23,8 @@ function App() {
       <BrowserRouter>
       <Navbar />
       <Route exact path="/">
-        {!user && <Redirect to="/login"/>}
-        {user && <Home />}
+        {user && <Redirect to="/Search"/>}
+        {!user && <Home />}
       </Route>
       <Route path="/Favourites">
         {user && <Favourites />}
