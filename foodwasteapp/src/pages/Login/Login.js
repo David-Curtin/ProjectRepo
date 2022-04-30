@@ -14,6 +14,7 @@ export default function Login() {
     e.preventDefault()
     login(email, password)
   }
+  
     return (
       <form onSubmit={handleSubmit} className={styles['login-form']}>
           <h2>Login</h2>
