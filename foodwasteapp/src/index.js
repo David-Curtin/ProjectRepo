@@ -7,7 +7,7 @@ import { AuthContextProvider }  from './context/AuthContext'
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
-    <App />
+    <App className='body'/>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

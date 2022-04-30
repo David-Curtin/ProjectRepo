@@ -1,6 +1,5 @@
 import { useReducer, useEffect, useState } from "react";
 import { database } from "../firebase/config";
-import { useAuthContext } from "./useAuthContext";
 
 let initState = {
     document: null,
