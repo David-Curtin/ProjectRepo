@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useLogin } from "../../hooks/useLogin"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 //styles
 import styles from './Login.module.css'
 
@@ -37,7 +36,7 @@ export default function Login() {
 
               />
             </label>
-          {!isPending && <button type="sumbit" class="btn btn-light">Login</button>}
+          {!isPending && <button className="btn">Login</button>}
           {isPending && <button className="btn" disabled>Loading</button>}
           {error && <p>{error}</p>}
       </form>

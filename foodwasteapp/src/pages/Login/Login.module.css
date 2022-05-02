@@ -3,7 +3,6 @@
     margin: 60px auto;
     padding: 20px;
     border-radius: 10px;
-
   }
   .login-form label {
     display: block;
@@ -16,7 +15,7 @@
   }
   .login-form input {
     padding: 8px 6px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 1em;
     color: #777;
     width: 100%;
