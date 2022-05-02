@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { database } from "../firebase/config"
 
 export const useCollection = (collection) => {
-    const [documents, setDocuments] = useState(null)
+    const [documents, setDocuments] = useState([])
     const [error, setError] = useState(null)
 
     useEffect(() => {
