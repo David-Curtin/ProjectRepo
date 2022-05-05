@@ -3,7 +3,7 @@ import Recipe from "../../components/Recipe"
 
 
 export default function Favourites() {
-  const { documents, error} = useCollection('recipes')
+  const { documents } = useCollection('recipes')
     return (
       <div>
           <h1>Favourites</h1>
@@ -11,9 +11,9 @@ export default function Favourites() {
             {documents.map((documents) => (
               <Recipe 
               uid={documents.uid}
-              myKey={documents.id}
               title={documents.title}
               image={documents.image}
+              myKey={documents.myKey}
               />
             ))}
           </div>

@@ -33,7 +33,6 @@ export default function Login() {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
-
               />
             </label>
           {!isPending && <button className="btn">Login</button>}

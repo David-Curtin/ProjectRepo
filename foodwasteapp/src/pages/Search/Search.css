@@ -8,12 +8,10 @@
 }
 .search-form {
     border-radius: 10px;
-    border-color: black;
-    box-shadow: #777;
     max-width: 360px;
     margin: 60px auto;
     padding: 20px;
-    box-sizing: border-box;
+    background: yellowgreen;
 
 }
 .search-bar1 {
