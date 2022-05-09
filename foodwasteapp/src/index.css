@@ -2,11 +2,12 @@
 
 /* base styles */
 body {
-  font-family: Poppins, sans-serif;
+  font-family: Poppins;
   margin: 0;
   font-size: 1.1em;
 }
 ul, li, p, h1, h2, h3, h4 {
+  font-family: Poppins;
   margin: 0;
   padding: 0;
 }
@@ -14,16 +15,17 @@ ul {
   list-style-type: none;
 }
 .btn {
-  background: none;
-  border: 2px solid #1f9751;
+  position: relative;
+  font-family: Poppins;
+  background: rgb(37, 150, 190);
   padding: 6px 12px;
   border-radius: 4px;
-  color: #1f9751;
+  color: #0d6efd;
   font-weight: bold;
   cursor: pointer;
   font-size: 1em;
 }
 .btn:hover {
-  background: #1f9751;
+  background: rgb(37, 150, 190);
   color: #fff;
 }

@@ -2,19 +2,16 @@
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from "../hooks/useAuthContext"
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
-
-
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-export default function Navbarre() {
+export default function NavigationBar() {
   const { logout } = useLogout()
   const { user } = useAuthContext()
 
   return (
     <div >
-      <Navbar bg="light" variant="light">
+      <Navbar bg="info" variant="light">
         <Container>
           <Nav className="me-auto">
           {!user && (    

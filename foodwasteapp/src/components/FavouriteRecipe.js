@@ -1,6 +1,5 @@
 import React from 'react'
 import './Recipe.css'
-import { Button } from "react-bootstrap"
 import { database } from '../firebase/config'
 
 
@@ -28,10 +27,10 @@ export default function FavouriteRecipe({title, image, myKey, uid}) {
     
 return (
     <div className="recipe">
-        <h1>{title}</h1>
         <img className="image" src={image} alt=""/>
-        <Button onClick={getRecipe} className="recipeButton" variant="outline-success">Get Recipe</Button>
-        <Button onClick={removeRecipe} className="recipeButton" variant="outline-success">Remove From Favourites</Button>
+        <h1>{title}</h1>
+        <button onClick={getRecipe} className="btn">Get Recipe</button>
+        <button onClick={removeRecipe} className="btn">Remove From Favourites</button>
     </div>
 )
 }

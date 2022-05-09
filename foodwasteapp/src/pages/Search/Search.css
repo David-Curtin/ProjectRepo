@@ -1,3 +1,6 @@
+.search {
+    font-family: 'Poppins';
+}
 .recipes {
     width: 90%;
     display: flex;
@@ -11,7 +14,7 @@
     max-width: 360px;
     margin: 60px auto;
     padding: 20px;
-    background: yellowgreen;
+    background: rgb(221, 230, 235);
 
 }
 .search-bar1 {

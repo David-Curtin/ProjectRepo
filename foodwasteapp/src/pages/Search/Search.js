@@ -42,7 +42,8 @@ export default function Search() {
     }
 
     return (
-      <div>
+      <div className="search">
+        <h1>Search</h1>
           <form onSubmit={getSearch} className="search-form">
             <p>Enter Ingredients (multiple selections must be comma seperated)</p>
             <input onChange={changeIngredients} className="search-bar1" value={search} type="text"/>

@@ -16,8 +16,9 @@ export default function Login() {
   }
   
     return (
+      <div>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit} className={styles['login-form']}>
-          <h2>Login</h2>
           <label className="">
             <span>Email</span>
             <input
@@ -39,6 +40,7 @@ export default function Login() {
           {isPending && <button className="btn" disabled>Loading</button>}
           {error && <p>{error}</p>}
       </form>
+      </div>
     )
   }
   

@@ -1,18 +1,28 @@
-import { Button } from "react-bootstrap"
+import './Home.css'
 
 export default function Home() {
   return (
     <div>
-        <h1>Home Page</h1>
-        <p>Sign Up here!</p>
-        <Button href="/Signup">Sign up</Button>
-        <p>Or, if you already have an account, you can login here. </p>
-        <Button href="/Login">Login</Button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nulla eu erat facilisis sodales. Fusce justo massa, rutrum ac aliquam vel, laoreet eu mauris. Donec posuere dolor vitae odio consequat aliquam. Maecenas mi elit, tempus non eros sed, condimentum commodo ante. In et velit et quam feugiat gravida non efficitur nisi. Aenean massa tortor, congue a est ut, gravida laoreet orci. Maecenas ac quam vitae dui tincidunt gravida non vitae diam. Integer nec pellentesque libero. Nulla quis mi in ex efficitur ultrices vitae nec turpis. Ut eu nisi eu lorem consequat aliquam.
-Suspendisse vitae iaculis sem, eget lacinia tortor. Suspendisse varius auctor velit, non accumsan dolor elementum sit amet. Quisque egestas, lectus sit amet auctor sodales, odio nisi hendrerit est, vel congue diam erat non enim. Vestibulum vitae aliquam diam. Donec nec quam vitae libero congue commodo vel eu velit. Aenean ut bibendum ligula, et maximus libero. Aliquam varius viverra tellus, non mollis lacus viverra eu. Duis convallis blandit metus, vel auctor nibh suscipit et. Donec consequat sem sit amet dolor dapibus, laoreet dignissim augue vulputate.
-Donec eleifend dapibus leo, ut vulputate ligula tincidunt ut. Mauris vel lorem sagittis, molestie libero sit amet, tincidunt mi. Proin facilisis, lectus a lobortis lacinia, augue mauris pharetra enim, sed laoreet dolor ante id libero. Duis sagittis augue non erat varius, vel finibus justo volutpat. Sed blandit nulla in pellentesque tristique. Suspendisse congue malesuada laoreet. Sed vitae metus eget nunc dapibus rhoncus id vel risus. Fusce convallis tellus eget mollis ullamcorper. Etiam a ante vulputate, consequat ex nec, aliquam nunc. Maecenas volutpat lacus vestibulum orci aliquam, id porta augue finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vitae tortor non ipsum venenatis finibus. Sed eget justo volutpat, dictum libero vel, fermentum metus.
-Maecenas iaculis ligula nec pulvinar malesuada. In eget nibh vestibulum, pharetra nibh vitae, condimentum magna. Nam consectetur lectus sed ex pharetra, id hendrerit quam feugiat. Phasellus interdum rhoncus ligula a feugiat. Nunc sed sapien ac sem vehicula sollicitudin. Vestibulum non dolor justo. Morbi mauris enim, tincidunt non pretium ultricies, ultricies a libero. Praesent tincidunt, lorem nec tincidunt sagittis, metus sapien efficitur justo, nec posuere eros justo vel turpis. Morbi rutrum et quam sit amet cursus. Quisque pharetra ultricies orci, vitae placerat leo lacinia et. Nam hendrerit vulputate erat, a ultrices ligula vulputate eget. Aenean non euismod ipsum
-Praesent volutpat arcu elementum augue placerat porta. Nam finibus massa sed ipsum varius condimentum. Vestibulum elementum blandit risus, ultrices placerat est interdum et. Nulla ac placerat turpis, id elementum diam. Donec eu urna purus. Nam consequat ipsum ac luctus rhoncus. Donec rhoncus hendrerit mi id tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ullamcorper purus a quam gravida pulvinar. In hac habitasse platea dictumst. Mauris porttitor, nulla vitae lobortis sagittis, arcu est ullamcorper risus, et dictum nibh orci sit amet libero. Ut in vehicula orci. Donec ac sagittis nunc, sagittis viverra mi. Suspendisse scelerisque augue at tellus viverra, eu tincidunt neque luctus. Sed eget ornare felis.</p>
+      <h1>Home Page</h1>
+        <p className="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nulla eu 
+          malesuada laoreet. Sed vitae metus eget nunc dapibus rhoncus id vel risus. Fusce convallis 
+          Praesent volutpat arcu elementum augue placerat porta. Nam finibus massa sed ipsum varius condimentum. 
+          Vestibulum elementum blandit risus, ultrices placerat est interdum et. Nulla ac placerat turpis, id elementum 
+          diam. Donec eu urna purus. Nam consequat ipsum ac luctus rhoncus. Donec rhoncus hendrerit mi id tincidunt. 
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ullamcorper 
+          purus a quam gravida pulvinar. In hac habitasse platea dictumst. Mauris porttitor, nulla vitae lobortis sagittis, 
+          arcu est ullamcorper risus, et dictum nibh orci sit amet libero. Ut in vehicula orci. Donec ac sagittis nunc, 
+          sagittis viverra mi. Suspendisse scelerisque augue at tellus viverra, eu tincidunt neque luctus. Sed eget ornare felis.
+        </p> 
+
+        <form className="form">
+          <p>Sign Up here!</p>
+          <button className="button" href="/Signup">Sign up</button>
+          <p></p>
+          <p></p>
+          <p>Or, if you already have an account, you can login here.</p>
+          <button className="button" href="/Login">Login</button>
+        </form>
     </div>
   )
 }
