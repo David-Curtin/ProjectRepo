@@ -38,10 +38,10 @@ export default function Search() {
       setQuery(search + '&intolerances=' + intolerance)
       setSearch('')
       setIntolerance('')
+      console.log(user)
     }
 
     return (
-
       <div>
           <form onSubmit={getSearch} className="search-form">
             <p>Enter Ingredients (multiple selections must be comma seperated)</p>
