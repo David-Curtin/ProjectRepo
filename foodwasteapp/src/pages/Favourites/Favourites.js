@@ -9,6 +9,7 @@ export default function Favourites() {
     return (
       <div>
           <h1>Favourites</h1>
+          <p>Your favourite recipes</p>
           <div className="recipes">
             {documents.filter(function (document) { 
               return document.uid === user.uid

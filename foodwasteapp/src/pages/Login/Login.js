@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { useLogin } from "../../hooks/useLogin"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-//styles
 import styles from './Login.module.css'
 
 export default function Login() {

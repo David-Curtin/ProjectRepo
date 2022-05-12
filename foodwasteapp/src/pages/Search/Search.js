@@ -38,12 +38,12 @@ export default function Search() {
       setQuery(search + '&intolerances=' + intolerance)
       setSearch('')
       setIntolerance('')
-      console.log(user)
     }
 
     return (
       <div className="search">
         <h1>Search</h1>
+        <p>Use the form below to search for recipes!</p>
           <form onSubmit={getSearch} className="search-form">
             <p>Enter Ingredients (multiple selections must be comma seperated)</p>
             <input onChange={changeIngredients} className="search-bar1" value={search} type="text"/>
@@ -62,7 +62,7 @@ export default function Search() {
             title={recipe.title}
             image={recipe.image}
             />
-          ))} </div>
+          ))}</div>
       </div>
     )
   }
