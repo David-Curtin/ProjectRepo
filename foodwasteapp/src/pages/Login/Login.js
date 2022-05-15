@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { useLogin } from "../../hooks/useLogin"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-//styles
 import styles from './Login.module.css'
 
 export default function Login() {
@@ -16,8 +14,9 @@ export default function Login() {
   }
   
     return (
+      <div>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit} className={styles['login-form']}>
-          <h2>Login</h2>
           <label className="">
             <span>Email</span>
             <input
@@ -39,6 +38,7 @@ export default function Login() {
           {isPending && <button className="btn" disabled>Loading</button>}
           {error && <p>{error}</p>}
       </form>
+      </div>
     )
   }
   

@@ -1,0 +1,29 @@
+.paragraph{
+    padding-top: 80px;;
+    font-family: 'Poppins';
+}
+
+.button {
+    background-color: rgb(37, 150, 190);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form {
+    border-radius: 5px;
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 50px;
+    flex-direction: column;
+    position: relative;
+    bottom: auto;
+    /* background-color: rgb(221, 230, 235); */
+    display: flex;
+    box-shadow: 2rem 3rem 5rem #aaa; 
+}
+
+.home {
+    background-image: url("../../../public/pexels-anna-shvets-3645504.jpg");
+    background-size: 1000px 1000px;
+    background-position: 50%;
+}
